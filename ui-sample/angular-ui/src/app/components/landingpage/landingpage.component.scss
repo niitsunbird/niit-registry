@@ -1,0 +1,32 @@
+
+.ui .card {
+        box-shadow: 0 0.25rem 0.75rem rgba(65, 58, 58, 0.42);
+}
+
+.card-title {
+    padding: 0 0 1em 1em;
+    font-weight: bold;
+    font-size: 1.25em;
+
+}
+
+.ui.vertical.stripe p {
+    font-size: 1.33em;
+}
+
+.ui.vertical.stripe{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+#banner {
+    background-color: #666666;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRe_gbCZSU4YUcANZ2OyLfKMlTozJJJh1MEfqdOPfD9SPBFn_6x&usqp=CAU");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 14em 0;
+    text-align: center;
+    position: relative;
+}

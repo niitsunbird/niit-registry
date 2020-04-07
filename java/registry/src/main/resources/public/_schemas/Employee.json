@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "Employee": {
+      "$ref": "#/definitions/Employee"
+    }
+  },
+  "required": [
+    "Employee"
+  ],
+  "title":"Employee",
+  "definitions": {
+    "Employee": {
+      "$id": "#/properties/Employee",
+      "type": "object",
+      "title": "The Employee Schema",
+      "required": [
+        "name",
+        "email",
+        "phone"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/properties/name",
+          "type": "string",
+          "$comment": "Employee name"
+        },
+        "email": {
+          "$id": "#/properties/email",
+          "type": "string",
+          "$comment": "Email id"
+        },
+        "phone": {
+          "$id": "#/properties/phone",
+          "type": "string",
+          "$comment": "Phone"
+        },
+        "macAddress": {
+          "$id": "#/properties/macAddress",
+          "type": "string",
+          "$comment": "MAC Address"
+        },
+        "isActive": {
+          "$id": "#/properties/isActive",
+          "type": "boolean",
+          "$comment": "isActive"
+        },
+        "role": {
+          "$id": "#/properties/role",
+          "type": "string",
+          "enum": [
+            "TECH LEAD", "SENIOR SOFTWARE ENGINEER", "SENIOR DATA SCIENTIST", "TECHNICAL MANAGER", "PRINCIPAL ENGINEER", "DATA SCIENTIST", "TECHNICAL ARCHITECT", "SOFTWARE ENGINEER", "TECHNICAL WRITER", "HEAD - ENGINEERING"
+          ],
+          "title": "Employee role"
+        },
+        "code": {
+          "$id": "#/properties/code",
+          "type": "string",
+          "$comment": "Employee identifier"
+        },
+        "githubId":{
+          "$id": "#/properties/githubId",
+          "type": "string",
+          "title": "Github identifier"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date",
+          "$comment": "YYYY-MM-DD format",
+          "examples": [
+            "1990-12-01"
+          ]
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date",
+          "$comment": "YYYY-MM-DD format",
+          "examples": [
+            "1990-12-01"
+          ]
+        },
+        "kcid": {
+          "$id": "#/properties/kcid",
+          "type": "string",
+          "$comment": "Keycloak identity"
+        },
+        "photoUrl": {
+          "$id": "#/properties/photoUrl",
+          "type": "string",
+          "$comment": "photo png"
+        },
+        "clientInfo": {
+          "$id": "#/properties/clientInfo",
+          "$ref": "ClientInfo.json#/definitions/ClientInfo"
+        }
+      }
+    }
+  },
+  "_osConfig": {
+    "osComment": ["This section contains the OpenSABER specific configuration information",
+      "privateFields: Optional; list of field names to be encrypted and stored in database",
+      "signedFields: Optional; list of field names that must be pre-signed",
+      "indexFields: Optional; list of field names used for creating index. Enclose within braces to indicate it is a composite index. In this definition, (serialNum, teacherCode) is a composite index and teacherName is a single column index.",
+      "uniqueIndexFields: Optional; list of field names used for creating unique index. Field names must be different from index field name",
+      "systemFields: Optional; list of fields names used for system standard information like created, updated timestamps and userid"],
+
+    "privateFields": ["email","phone"],
+    "signedFields": [],
+    "indexFields": [],
+    "uniqueIndexFields": ["(name, startDate)", "kcid", "code"],
+    "systemFields": [
+      "osCreatedAt",
+      "osUpdatedAt",
+      "osCreatedBy",
+      "osUpdatedBy"
+    ],
+    "additionalProperties": false
+  }
+}

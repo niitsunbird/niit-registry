@@ -1,0 +1,19 @@
+{
+  "subject": "Reporter",
+  "fields": [
+    {
+      "name": "name",
+      "title": "name",
+      "display": true
+    },
+    {
+      "name": "orgName"
+    },
+    {
+      "name": "isActive"
+    },
+    {
+      "name": "role"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+    "type": "filter",
+    "action": "search",
+    "data": {
+        "templateName": "defaultTemplate",
+        "action": "search",
+        "fields": [
+            {
+                "code": "role",
+                "dataType": "text",
+                "name": "Role",
+                "label": "Role",
+                "description": "Role",
+                "editable": true,
+                "inputType": "select",
+                "required": false,
+                "displayProperty": "Editable",
+                "visible": true,
+                "range": [
+                    {
+                      "id": "TECH LEAD",
+                      "name": "TECH LEAD"
+                    },
+                    {
+                      "id": "SENIOR SOFTWARE ENGINEER",
+                      "name": "SENIOR SOFTWARE ENGINEER"
+                    },
+                    {
+                      "id": "SENIOR DATA SCIENTIST",
+                      "name": "SENIOR DATA SCIENTIST"
+                    },
+                    {
+                      "id": "TECHNICAL MANAGER",
+                      "name": "TECHNICAL MANAGER"
+                    },
+                    {
+                      "id": "PRINCIPAL ENGINEER",
+                      "name": "PRINCIPAL ENGINEER"
+                    },
+                    {
+                      "id": "DATA SCIENTIST",
+                      "name": "DATA SCIENTIST"
+                    },
+                    {
+                      "id": "TECHNICAL ARCHITECT",
+                      "name": "TECHNICAL ARCHITECT"
+                    },
+                    {
+                      "id": "SOFTWARE ENGINEER",
+                      "name": "SOFTWARE ENGINEER"
+                    },
+                    {
+                      "id": "TECHNICAL WRITER",
+                      "name": "TECHNICAL WRITER"
+                    },
+                    {
+                      "id": "HEAD - ENGINEERING",
+                      "name": "HEAD - ENGINEERING"
+                    }
+                  ],
+                "renderingHints": {
+                    "semanticColumnWidth": "four"
+                },
+                "index": 1
+            }
+        ]
+    }
+}

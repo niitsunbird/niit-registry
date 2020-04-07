@@ -1,0 +1,42 @@
+{
+  "subject": "Admin",
+  "fields": [
+    {
+      "name": "name",
+      "display": true
+    },
+    {
+      "name": "osid"
+    },
+    {
+      "name": "email"
+    },
+    {
+      "name": "phone"
+    },
+    {
+      "name": "macAddress"
+    },
+    {
+      "name": "githubId"
+    },
+    {
+      "name": "role"
+    },
+    {
+      "name": "isActive"
+    },
+    {
+      "name": "startDate"
+    },
+    {
+      "name": "endDate"
+    },
+    {
+      "name": "code"
+    },
+    {
+      "name": "clientInfo"
+    }
+  ]
+}
