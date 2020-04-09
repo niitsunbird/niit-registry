@@ -96,11 +96,11 @@ database:
       #     ** Example - cassandra - jdbc:cassandra://localhost:9160/yourdb
       uri: ${connectionInfo_uri:jdbc:postgresql://localhost:5432/NIITRegistryDb}
 
-      username: ${connectionInfo_username:aishwarya}
-      password: ${connectionInfo_password:aishu@123}
+      username: ${connectionInfo_username:}
+      password: ${connectionInfo_password:}
 
       # Any other shard information follows...
-    #-
+      #-
       #shardId: shard2
       #shardLabel: 2
       #uri: ${connectionInfo_uri:bolt://localhost:7688
@@ -127,7 +127,7 @@ frame:
   file: ${frame_file:frame.json}
 
 encryption:
-  enabled: ${encryption_enabled:false}
+  enabled: ${encryption_enabled:true}
   base: ${encryption_base:http://localhost:8013}
   uri: ${encryption_uri:http://localhost:8013/encrypt}
   batch:
@@ -149,15 +149,14 @@ signature:
     config:
       name: SignatureShape
 
-# These properties are used to enable the audit log
-# enabled : should be true to enable audit log and false to disable audit log
-# store : specifies the storage option is FILE or DATABASE
-# suffix : specifies the suffix given for schema. If audit schema name is Teacher_Audit.json, the suffix is Audit.
-# suffixSeperator : specifies the separator used between entity name and suffix. If audit schema name is Teacher_Audit.json, the suffixSeperator is _.
+    #audit:
+    #enabled: ${audit_enabled:false}
+    #frame:
+    #file: ${audit_frame_file:audit_frame.json}
 audit:
   enabled: true
   frame:
-    store: ${audit_frame_store:DATABASE
+    store: ${audit_frame_store:DATABASE}
     suffix: ${audit_suffix:Audit}
     suffixSeparator: ${audit_suffixSeparator:_}
 
@@ -165,7 +164,7 @@ authentication:
   enabled: ${authentication_enabled:true}
   publicKey:  ${authentication_publickey:MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs50czuk9xI6wPq1zgumvvOG7z9muJ6zctQVGazm/s8/zynX/ZkwTB9nV8CNxg54zbxBlljgK0Er4H2fnhOpQycrfvH4dj5lCjVVA9uXEnHwmwZR0CozOXchxlcPG54UsLqcTY9vja+tBJ9dwb++LOcejWUp8AxYBjVOvDx3c1hfZO3fBR3nYmKlW5qmfEo4Y3JqRr/C+BloBrBLZ942oaml6JbTCyHIZhAQzDVlUK32EWeQ1Z02QY++kMPRooNDfudNHTuTfnctzLHeCtrHjKgJrmaQ7IaRk0eGhBPetTVRDqaY8Y6BkC6IW6lXhYtOlj3EXIwIgNO0gvnTzBGK65QIDAQAB}
   realm:  ${authentication_realm:NIITRegistry}
-  url:  ${authentication_url:http://localhost:8443/auth/}
+  url:  ${authentication_url:http://localhost:8080/auth/}
 
 validation:
   enabled: ${validation_enabled:true}
@@ -305,7 +304,7 @@ audit:
 #   store: ${audit_frame_store:FILE}
     suffix: ${audit_suffix:Audit}
     suffixSeparator: ${audit_suffixSeparator:_}
-   
+
 authentication:
   enabled: true
 
